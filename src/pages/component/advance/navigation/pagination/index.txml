@@ -1,0 +1,33 @@
+ 
+<view class="page">
+
+  <section title="Usage"
+    description="Paginations are used to create controls that allow user to browse paged content from page to page." />
+ 
+  <view class="container">
+    <text class="title">Variants</text>
+    <view class="panel">
+      <text class="panel--type">Full page</text>
+      <view class="panel--page">
+        <view>{{fullPage.items[fullPage.currentPage - 1]}}</view>
+      </view>
+      <view class="panel--pagination">
+        <pagination currentPage="{{fullPage.currentPage}}" max="{{fullPage.items.length}}" type="page"
+          onChange="onFullPageChange" />
+      </view>
+    </view>
+
+    <view class="panel">
+      <text class="panel--type">Number only</text>
+
+      <view class="panel--page">
+        <view>{{numberOnly.items[numberOnly.currentPage - 1]}}</view>
+      </view>
+      <view class="panel--pagination">
+        <pagination currentPage="{{numberOnly.currentPage}}" max="{{numberOnly.items.length}}" type="number"
+          onChange="onNumberOnlyChange" />
+      </view> 
+    </view>
+
+  </view>
+</view>

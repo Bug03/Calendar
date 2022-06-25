@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/component/advance/form/calendar/index"
+  ],
+  "window": {
+    "defaultTitle": "Tiki MiniApp Demo",
+    "titleBarColor": "#1A94FF",
+    "titleColor": "#fff",
+    "transparentTitle": "none"
+  }
+}

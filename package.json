@@ -1,0 +1,19 @@
+{
+  "name": "tiniapp-example-api-demo-1656140860872",
+  "version": "0.1.0",
+  "tiki": {
+    "appIdentifier": "vn.tiki.tiniapp.example.api_demo",
+    "buildNumber": 1,
+    "metadata": {
+      "frameworkComponentUrl": "https://salt.tikicdn.com/ts/miniapp/da/33/7e/7136fad18cd0d6ea0b1e710938deb632.js"
+    }
+  },
+  "dependencies": {
+    "@tiki.vn/mini-html-parser2": "^0.0.4",
+    "@tiki.vn/tini-ui": "0.12.1-rc.7",
+    "query-string": "^7.0.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2"
+  }
+}

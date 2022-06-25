@@ -1,0 +1,69 @@
+<view style="
+    width:100%;
+    height:100%;
+  ">
+  <block-header title="Usage" description="When the application needs to be more obvious to warn or remind the user's current operation behavior, you can use the dialog box. The user needs to perform operations on the dialog box before ending." />
+  <block-variant
+    header="Demo"
+    title="1. Basic modal"
+  >
+    <button
+      class="mt-2x-small"
+      onTap="onTap"
+      data-modal="{{
+          type:'basic',
+      }}"
+    >Basic Modal</button>
+  </block-variant>
+  <block-variant
+    title="2. Top Image"
+    description="Use modal with top images"
+  >
+    <button 
+      class="mt-2x-small"
+      onTap="onTap"
+      data-modal="{{
+          type:'image',
+          showClose:true,
+      }}"
+    >Show Modal</button>
+  </block-variant>
+    <modal
+        show="{{modal.type==='basic'}}"
+        showClose="{{modal.showClose}}"
+        buttons="{{[{type: 'outline', text: 'Cancel'}, {text: 'OK'}]
+        }}"
+        onModalClose="resetModal"
+        onMaskClick="onMaskClick"
+        onButtonClick="onButtonClick">
+        <view slot="header">
+          <text>Title</text>
+        </view>
+        <view slot="description">
+          <text>Description</text>
+        </view>
+        <view class="modal-content">
+          Swap me!!!
+        </view>
+    </modal>
+    <modal
+        show="{{modal.type==='image'}}"
+        onModalClose="resetModal"
+        onMaskClick="onMaskClick"
+        topImage='http://placeimg.com/640/480'
+        topImageSize="{{modal.topImageSize}}"
+        animationType="slide"
+        buttons="{{[{type:'outline', text: 'Close'}]}}"
+        onButtonClick="onButtonClick">
+        <view slot="header">
+          <text>Title</text>
+        </view>
+        <view slot="description">
+          <text>Description</text>
+        </view>
+        <view class="modal-content flex justify-around">
+          <button class="w-full mr-4x" data-size="md" onTap="changeImageSize">md</button>
+          <button class="w-full ml-4x" data-size="lg" onTap="changeImageSize">lg</button>
+        </view>
+    </modal>
+</view>

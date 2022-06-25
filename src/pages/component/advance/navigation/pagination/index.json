@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "pagination",
+  "backgroundColor":"#fff",
+  "usingComponents": {
+    "pagination": "@tiki.vn/tini-ui/es/pagination/index",
+    "section": "components/block-header/index"
+  }
+}
